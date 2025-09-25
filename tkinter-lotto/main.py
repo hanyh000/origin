@@ -2,7 +2,7 @@ import tkinter
 import tkinter.font
 import random
 
-lotto_num = random.sample(range(1,46))
+lotto_num = range(1,46)
 
 def buttonClick():
     print(random.sample(lotto_num,6))
