@@ -13,7 +13,7 @@ menu_1.add_command(label="저장")
 menu_1.add_separator()
 menu_1.add_command(label="종료",command=window.destroy)
 menu.add_cascade(label="파일",menu=menu_1)
-menu_2 = Menu(menu,tearoff=0)
+menu_2 = Menu(menu, tearoff=0)
 menu_2.add_command(label="만든이")
 menu_2.add_cascade(label="만든이",menu=menu_2)
 
