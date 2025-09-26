@@ -8,8 +8,8 @@ class Atm:
       self.all = all
       self.exit = exit
 
-a1= []
-a2 = 0
+a1=[]
+a2=0
 n=[]
 i=0
 s=[]
@@ -53,9 +53,6 @@ while True:
             else :
                 print("유효하지 않은 ID입니다.\n")
         if number == 4:
-            while j<len(a1):
-                j= i
-                i+=1
                 print("계좌ID:{}\n".format(a1))
                 print("이름: {}\n".format(n))
                 print("잔액: {}\n".format(s))
@@ -64,5 +61,3 @@ while True:
     except:
         print("정수를 입력하지 않았습니다.")
     time.sleep(5)
-#정보를 튜플 방식으로 저장하고  
-#랭스 길이로 4번에서 계좌 갯수를 파악하여 전체 계좌 출력
