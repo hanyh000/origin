@@ -1,18 +1,18 @@
 import time
-class Atm:
 
-   def menu(self, account, income, outcome, all, exit ): 
+class Atm:
+    def menu(self, account, income, outcome, all, exit ): 
       self.account = account
       self.income =income
       self.outcome = outcome
       self.all = all
       self.exit = exit
 
-a1=0
+a1= []
 a2 = 0
-n=0
+n=[]
 i=0
-s=0
+s=[]
 while True:
     try:
         print("-----Menu-----\n")
@@ -33,30 +33,36 @@ while True:
             print("[입  금]\n")
             a2 = input("계좌ID:(숫자로 입력) ")
             i = int(input("입금액: "))
-            if a2 != a1 :
-                print("유효하지 않은 ID입니다.\n")
-            else :
+            if a2 in a1 :
                 s +=i
                 print("입금완료\n")
+            else :
+                print("유효하지 않은 ID입니다.\n")
         if number == 3:
             print("[출  금]\n")
             a2 = input("계좌ID:(숫자로 입력) ")
             i = int(input("출금액: "))
-            if a2 != a1 :
-                print("유효하지 않은 ID입니다.\n")
-            else :
+            if a2 in a1 :
                 s -=i
                 if s<0:
                     print("출금액이 너무 큽니다.")
                     s+=i
                 else:
                     print("출금완료\n")
+                
+            else :
+                print("유효하지 않은 ID입니다.\n")
         if number == 4:
-            print("계좌ID:{}\n".format(a1))
-            print("이름: {}\n".format(n))
-            print("잔액: {}\n".format(s))
+            while j<len(a1):
+                j= i
+                i+=1
+                print("계좌ID:{}\n".format(a1))
+                print("이름: {}\n".format(n))
+                print("잔액: {}\n".format(s))
         if number == 5:
             break
     except:
         print("정수를 입력하지 않았습니다.")
     time.sleep(5)
+#정보를 튜플 방식으로 저장하고  
+#랭스 길이로 4번에서 계좌 갯수를 파악하여 전체 계좌 출력
