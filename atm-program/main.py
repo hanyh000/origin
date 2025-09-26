@@ -45,7 +45,11 @@ while True:
                 print("유효하지 않은 ID입니다.\n")
             else :
                 s -=i
-                print("출금완료\n")
+                if s<0:
+                    print("출금액이 너무 큽니다.")
+                    s+=i
+                else:
+                    print("출금완료\n")
         if number == 4:
             print("계좌ID:{}\n".format(a1))
             print("이름: {}\n".format(n))
