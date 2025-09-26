@@ -1,3 +1,4 @@
+import time
 class Atm:
 
    def menu(self, account, income, outcome, all, exit ): 
@@ -58,3 +59,4 @@ while True:
             break
     except:
         print("정수를 입력하지 않았습니다.")
+    time.sleep(5)
